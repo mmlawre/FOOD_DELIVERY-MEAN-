@@ -1,0 +1,49 @@
+<body class="bg-img">
+<p>
+</p>
+<b><H1 style="text-align:center;"> Register Here
+</H1></b>
+<p style="text-align:center;">Please fill in this form to create an account.</p>
+
+<form class="example-form" style="text-align:center;" >
+    
+<div class="container"  >
+    <p>
+        <mat-form-field class="example-full-width" >
+          <mat-label>First name</mat-label>
+            <input matInput [(ngModel)]="registerData.firstname" name="firstname" placeholder="Ex. John" required>
+          </mat-form-field>
+    </p>
+</div>
+    <p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Last name</mat-label>
+            <input matInput [(ngModel)]="registerData.lastname" name="lastname" placeholder="Ex. Doe" required>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="registerData.email" name="email" placeholder="Ex.JohnDoe@email.com" required type="email"> 
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="registerData.password" name="password" placeholder="password"  required type="password">
+          </mat-form-field>
+    </p>
+     <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Telephone</mat-label>
+        <span matPrefix>+1 &nbsp;</span>
+        <input type="tel" matInput [(ngModel)]="registerData.telephone" name="telephone"placeholder="555-555-1234" required>
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+      </p>
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    <p>
+        <button mat-raised-button color="primary" (click)="Post()">Register</button>
+    </p>
+  </form>
+</body>

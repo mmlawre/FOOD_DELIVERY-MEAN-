@@ -1,0 +1,38 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    text-align: cen;
+  }
+  
+  label {
+    display: block;
+    width: 6em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
+  }
+  
+  input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
+  }
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    height: -5px;
+}
+nav{
+    font-weight: lighter;
+    font-style: italic;
+    display: block;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 82px;
+    border-color: black;
+    text-align: center;
+    
+}

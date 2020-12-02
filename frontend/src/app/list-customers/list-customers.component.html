@@ -1,0 +1,20 @@
+<h1 *ngIf="customers?.length == 0">
+  No Inventory Input! Please add new invetory
+  <button mat-button color="primary" routerLink="/addCustomer">Add Payment Information</button>
+</h1>
+<h1 *ngIf="customers?.length > 0">
+  Submitted Payment Information
+</h1>
+<ul *ngFor="let customer of customers let i = index">
+  <li>
+    First Name: {{customer.firstName}} <br>
+    Last Name: {{customer.lastName}} <br>
+    Card No.: {{customer.cardNumber}} <br>
+    Card Type: {{customer.cardType}} <br>
+    Exp Date: {{customer.exp}} <br>
+    Security Code: {{customer.cvc}} </li>
+  <p>
+    <button mat-raised-button color="warn" (click)="onDelete(customer._id)">Delete Payment Method</button>
+    <button mat-button color="accent" [routerLink]="['/editCustomer', customer._id]">Update Payment Method</button>
+  </p>
+</ul>

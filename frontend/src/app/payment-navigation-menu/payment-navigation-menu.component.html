@@ -1,0 +1,15 @@
+<div>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    <span> Payment Menu</span>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/listCustomers">
+      <span>List Payment Methods</span>
+    </button>
+    <button mat-menu-item routerLink="/addCustomer">
+      <span>Add Payment Methods</span>
+    </button>
+  </mat-menu>
+</div>

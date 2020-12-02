@@ -1,0 +1,50 @@
+<template>
+  <div>
+    <b> <h1 style="text-align:center;">Login Here</h1></b>
+    <p></p>
+
+    <p></p>
+
+    <form class="example-form" style="text-align:center;">
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input
+            matinput=""
+            [(ngmodel)]="loginData.email"
+            name="email"
+            placeholder="Ex.JohnDoe@email.com"
+            required=""
+            type="email"
+          />
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input
+            matinput=""
+            [(ngmodel)]="loginData.password"
+            name="password"
+            placeholder="password"
+            required=""
+            type="password"
+          />
+        </mat-form-field>
+      </p>
+      <label> <input type="checkbox" name="remember" /> Remember me </label>
+      <p></p>
+
+      <p>
+        <button mat-raised-button="" color="primary" (click)="login()">
+          Login
+        </button>
+      </p>
+    </form>
+  </div>
+</template>
+<script>
+export default {};
+</script>
+<style scoped></style>

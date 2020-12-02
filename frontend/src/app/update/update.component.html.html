@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script>
+      new Vue({
+        el: "#demo",
+        template: `<h1 style="text-align:center;">Update Here</h1>
+<form class="example-form" style="text-align:center;" *ngif="userData">
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>First name</mat-label>
+      <input
+        matinput=""
+        [(ngmodel)]="userData.firstname"
+        name="firstname"
+        placeholder="Ex. John"
+        required=""
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Last name</mat-label>
+      <input
+        matinput=""
+        [(ngmodel)]="userData.lastname"
+        name="lastname"
+        placeholder="Ex. Doe"
+        required=""
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input
+        matinput=""
+        [(ngmodel)]="userData.email"
+        name="email"
+        placeholder="Ex.JohnDoe@email.com"
+        required=""
+        type="email"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Telephone</mat-label>
+      <span matprefix="">+1 &nbsp;</span>
+      <input
+        type="tel"
+        matinput=""
+        [(ngmodel)]="userData.telephone"
+        name="telephone"
+        placeholder="555-555-1234"
+        required=""
+      />
+      <mat-icon matsuffix=""></mat-icon>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button="" color="primary" (click)="update()">
+    Update
+  </button>
+</form>
+`
+      });
+    </script>
+  </body>
+</html>

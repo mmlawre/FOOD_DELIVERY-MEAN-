@@ -1,0 +1,36 @@
+<!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"> -->
+<form (ngSubmit)="onSubmit()">
+  <label>
+    Item Name:
+    <!-- <input type="text" formControlName="itemName" [(ngModel)]="itemName" /> -->
+    <input type="text" formControlName="itemName" />
+    <!-- <p>{{ itemName }}</p> -->
+  </label>
+  <br />
+  <label>
+    Item Category:
+    <input type="text" formControlName="itemCat" />
+  </label>
+  <br />
+  <br />
+  <label>
+    Item Description:
+    <input
+      type="text"
+      formControlName="description"
+      (mouseover)="labelMouseOver()"
+    />
+  </label>
+  <label>
+    Price:
+    <input type="text" formControlName="price" />
+  </label>
+  <label>
+    Stock:
+    <input type="text" formControlName="stock" />
+  </label>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  <!-- <p>Form Status: {{ profileForm.status }}</p> -->
+  <p>Form Status:</p>
+</form>

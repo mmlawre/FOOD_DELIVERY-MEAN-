@@ -1,0 +1,15 @@
+<div>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    <span> Inventory Menu</span>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/listInventory">
+      <span>List Inventory</span>
+    </button>
+    <button mat-menu-item routerLink="/addInventory">
+      <span>Add Inventory</span>
+    </button>
+  </mat-menu>
+</div>

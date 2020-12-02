@@ -1,0 +1,63 @@
+<template>
+  <div>
+    <mat-toolbar color="primary">
+      <span style="flex: 1 1 auto;">Shopping App</span>
+      <button
+        mat-button=""
+        *ngif="!apiService.isAuthenticated"
+        routerlink="/register"
+      >
+        Register
+      </button>
+      <button
+        mat-button=""
+        *ngif="!apiService.isAuthenticated"
+        routerlink="/login"
+      >
+        Login
+      </button>
+      <button
+        mat-button=""
+        *ngif="apiService.isAuthenticated"
+        routerlink="/payment"
+      >
+        Payment
+      </button>
+      <button
+        mat-button=""
+        *ngif="apiService.isAuthenticated"
+        routerlink="/inventory"
+      >
+        Inventory
+      </button>
+      <button
+        mat-button=""
+        *ngif="apiService.isAuthenticated"
+        routerlink="/profile"
+      >
+        Profile
+      </button>
+      <button
+        mat-button=""
+        *ngif="apiService.isAuthenticated"
+        (click)="apiService.logout()"
+        routerlink="/"
+      >
+        Logout
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <chat-config
+      [(theme)]="theme"
+      *ngif="apiService.isAuthenticated"
+    ></chat-config>
+    <chat-widget
+      [theme]="theme"
+      *ngif="apiService.isAuthenticated"
+    ></chat-widget>
+  </div>
+</template>
+<script>
+export default {};
+</script>
+<style scoped></style>

@@ -1,0 +1,36 @@
+<div>
+    <h3>{{mode}} Payment Methods</h3>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <mat-form-field >
+        <input matInput placeholder="First Name" id="firstname" [(ngModel)]=" firstName" name="firstname" >
+      </mat-form-field>
+       <br>
+      <mat-form-field >
+        <input matInput placeholder="Last Name" id="lastname" [(ngModel)]=" lastName" name="lastname" >
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+        <input matInput placeholder="Card Number" id="cardnumber" [(ngModel)]=" cardNumber" name="cardnumber" >
+      </mat-form-field>
+      <br>
+    
+      <mat-form-field >
+        <input matInput placeholder="Card Type" id="cardtype" [(ngModel)]=" cardType" name="cardtype" >
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+        <input matInput placeholder="Exp: MM/YY" id="exp#" [(ngModel)]="exp" name="exp#" >
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+        <input matInput placeholder="CVC" id="cvc#" [(ngModel)]="cvc" name="cvc#" >
+      </mat-form-field>
+    
+    
+    
+    
+      <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+      </p>
+    </form>
+    </div>

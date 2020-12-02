@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script>
+      new Vue({
+        el: "#demo",
+        template: `<div style="text-align:center;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <b><h1>Customer Profile</h1></b>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>First Name: {{profile?.firstname}}</mat-list-item>
+        <mat-list-item>Last Name: {{profile?.lastname}}</mat-list-item>
+        <mat-list-item>Email: {{profile?.email}}</mat-list-item>
+        <mat-list-item>Telephone: {{profile?.telephone}}</mat-list-item>
+        <mat-list-item>
+          <button mat-raised-button="" color="warn" (click)="Delete()">
+            Delete
+          </button>
+          &nbsp;&nbsp;
+          <button
+            mat-raised-button=""
+            color="primary"
+            *ngif="apiService.isAuthenticated"
+            (click)="GotoUpdate()"
+          >
+            Update
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+`
+      });
+    </script>
+  </body>
+</html>
